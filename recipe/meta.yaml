@@ -1,8 +1,8 @@
 {% set name = "ispyb" %}
-{% set version = "4.13.2" %}
+{% set version = "5.0.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "d36763359063ecf9bdf77aa039ee91421baaddead4f460b42970457b72566d97" %}
+{% set hash_value = "fae6cb40ea183fd8d8e24b031df9252a309202d2a3a418ba6b2b71cfbc03e4ee" %}
 
 package:
   name: '{{ name|lower }}'
@@ -14,7 +14,7 @@ source:
   '{{ hash_type }}': '{{ hash_value }}'
 
 build:
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
