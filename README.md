@@ -204,5 +204,6 @@ Feedstock Maintainers
 =====================
 
 * [@KarlLevik](https://github.com/KarlLevik/)
+* [@anthchirp](https://github.com/anthchirp/)
 * [@stuartcampbell](https://github.com/stuartcampbell/)
 
