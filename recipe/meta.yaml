@@ -1,8 +1,8 @@
 {% set name = "ispyb" %}
-{% set version = "5.4.1" %}
+{% set version = "5.5.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "63db5c2a7b02c5413e2a784bb3972546d3ba49bd1460992b575ff5e12c251bb1" %}
+{% set hash_value = "9fbc807dcf3ff43281dd5bca9af805eaf2fdb385ebc3d1f5601774a32c3528ce" %}
 
 package:
   name: '{{ name|lower }}'
