@@ -2,7 +2,7 @@
 {% set version = "5.6.1" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "9469afab2c638fac66b4502e43224f50514706d2d2a2f1d3d91b0cb6a972c5f8" %}
+{% set hash_value = "212f798702be061ad9c5c2780ccf1db31df60d552410dda67570a188989fbb63" %}
 
 package:
   name: '{{ name|lower }}'
