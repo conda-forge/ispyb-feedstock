@@ -1,17 +1,14 @@
 {% set name = "ispyb" %}
-{% set version = "5.6.1" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "212f798702be061ad9c5c2780ccf1db31df60d552410dda67570a188989fbb63" %}
+{% set version = "5.6.2" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/DiamondLightSource/{{ name }}-api/archive/v{{ version }}.tar.gz
-  '{{ hash_type }}': '{{ hash_value }}'
+  sha256: 4a313910e55c90120dceafa36360d58772d152321612eb0029d076cd0f621232
 
 build:
   noarch: python
