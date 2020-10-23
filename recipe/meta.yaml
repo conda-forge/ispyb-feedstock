@@ -22,8 +22,9 @@ requirements:
     - pip
     - pytest-runner
   run:
-    - python
     - mysql-connector-python
+    - python
+    - tabulate
 
 test:
   imports:
