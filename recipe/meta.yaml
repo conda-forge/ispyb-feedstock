@@ -1,5 +1,5 @@
 {% set name = "ispyb" %}
-{% set version = "5.7.0" %}
+{% set version = "5.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/DiamondLightSource/{{ name }}-api/archive/v{{ version }}.tar.gz
-  sha256: 91b98d849bc9c17a8bbdc95f3b2284819b27781fa7e3e963153f216327b8965f
+  sha256: 0b5851bd19d116894bf85a3461a90cbc8ad708ee07541614551aa80b92bcd520
 
 build:
   noarch: python
@@ -22,8 +22,9 @@ requirements:
     - pip
     - pytest-runner
   run:
-    - python
     - mysql-connector-python
+    - python
+    - tabulate
 
 test:
   imports:
