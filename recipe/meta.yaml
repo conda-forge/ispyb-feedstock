@@ -1,5 +1,5 @@
 {% set name = "ispyb" %}
-{% set version = "5.7.1" %}
+{% set version = "5.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/DiamondLightSource/{{ name }}-api/archive/v{{ version }}.tar.gz
-  sha256: 0b5851bd19d116894bf85a3461a90cbc8ad708ee07541614551aa80b92bcd520
+  sha256: a1645b72a1126e39cd0275e210e47682fbd901ba092ee504f7a97b57f6f8e938
 
 build:
   noarch: python
