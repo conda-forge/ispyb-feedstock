@@ -1,7 +1,7 @@
 About ispyb
 ===========
 
-Home: https://github.com/DiamondLightSource/ispyb-api
+Home: https://pypi.org/project/ispyb/
 
 Package license: Apache-2.0
 
@@ -10,6 +10,8 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ispyb-feedstock
 Summary: Python package to access ISPyB database
 
 Development: https://github.com/DiamondLightSource/ispyb-api
+
+Documentation: https://ispyb.readthedocs.io/
 
 This package provides a python interface to ISPyB.
 It can access the ISPyB database directly or (in
