@@ -1,29 +1,27 @@
 {% set name = "ispyb" %}
-{% set version = "5.7.1" %}
+{% set version = "5.8.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/DiamondLightSource/{{ name }}-api/archive/v{{ version }}.tar.gz
-  sha256: 0b5851bd19d116894bf85a3461a90cbc8ad708ee07541614551aa80b92bcd520
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ispyb-{{ version }}.tar.gz
+  sha256: cfcc8568839e6c11b070b8eba4cd9475cf379f3a3435901764acb73299217e8f
 
 build:
-  noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python
-    - setuptools
+  host:
     - pip
     - pytest-runner
+    - python >=3.6
   run:
     - mysql-connector-python
-    - python
+    - python >=3.6
     - tabulate
 
 test:
@@ -35,19 +33,24 @@ test:
     - ispyb.interface
     - ispyb.sp
     - ispyb.ws
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: https://github.com/DiamondLightSource/ispyb-api
-  license: Apache-2.0
-  license_family: Apache
-  license_file: LICENSE.md
+  home: https://pypi.org/project/ispyb/
   summary: Python package to access ISPyB database
   description: |
     This package provides a python interface to ISPyB.
     It can access the ISPyB database directly or (in
     future versions) run on top of the official ISPyB
     webservices API.
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE.md
   dev_url: https://github.com/DiamondLightSource/ispyb-api
+  doc_url: https://ispyb.readthedocs.io/
 
 extra:
   recipe-maintainers:
