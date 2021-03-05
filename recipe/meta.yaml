@@ -1,5 +1,5 @@
 {% set name = "ispyb" %}
-{% set version = "5.9.1" %}
+{% set version = "6.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,26 +7,29 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ispyb-{{ version }}.tar.gz
-  sha256: 126ddcbf72ac4d717fcde0c603871f9ac772b3b6db636790f2be8bb357fb85e1
+  sha256: 10da76ba839d8f2e631463e3b457ad5c456ebd8b97d323f23c347e805a1544eb
 
 build:
   number: 0
   noarch: python
+  entry_points:
+    - ispyb.last_data_collections_on = ispyb.cli.last_data_collections_on:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - pytest-runner
     - python >=3.6
   run:
     - mysql-connector-python
     - python >=3.6
+    - sqlalchemy
     - tabulate
 
 test:
   imports:
     - ispyb
+    - ispyb.cli
     - ispyb.connector
     - ispyb.connector.mysqlsp
     - ispyb.connector.ws
@@ -35,6 +38,7 @@ test:
     - ispyb.ws
   commands:
     - pip check
+    - ispyb.last_data_collections_on --help
   requires:
     - pip
 
