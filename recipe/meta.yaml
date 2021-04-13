@@ -10,7 +10,7 @@ source:
   sha256: 444628d855089124ab6d1a1c78bd6dbc6cb1c234279ef760a599a5bea9e1e9f4
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - ispyb.last_data_collections_on = ispyb.cli.last_data_collections_on:main
@@ -38,6 +38,7 @@ test:
     - ispyb.ws
   commands:
     - pip check
+    - ispyb.job --help
     - ispyb.last_data_collections_on --help
   requires:
     - pip
