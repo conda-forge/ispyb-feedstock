@@ -1,5 +1,5 @@
 {% set name = "ispyb" %}
-{% set version = "6.1.0" %}
+{% set version = "6.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ispyb-{{ version }}.tar.gz
-  sha256: 444628d855089124ab6d1a1c78bd6dbc6cb1c234279ef760a599a5bea9e1e9f4
+  sha256: 21aaa32d809a90fc139f12ed2faded8cdb93517d24204a260f6128fa82728e9a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
+    - ispyb.job = ispyb.cli.job:main
     - ispyb.last_data_collections_on = ispyb.cli.last_data_collections_on:main
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -38,6 +39,7 @@ test:
     - ispyb.ws
   commands:
     - pip check
+    - ispyb.job --help
     - ispyb.last_data_collections_on --help
   requires:
     - pip
