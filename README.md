@@ -127,5 +127,6 @@ Feedstock Maintainers
 
 * [@KarlLevik](https://github.com/KarlLevik/)
 * [@anthchirp](https://github.com/anthchirp/)
+* [@rjgildea](https://github.com/rjgildea/)
 * [@stuartcampbell](https://github.com/stuartcampbell/)
 
