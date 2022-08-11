@@ -10,7 +10,7 @@ source:
   sha256: eede52157ae95790a40bfa434fb66962ec4733c8f06330766fef5cc0d908589f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - ispyb.job = ispyb.cli.job:main
