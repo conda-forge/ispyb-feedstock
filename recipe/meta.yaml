@@ -22,7 +22,7 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - mysql-connector-python
+    - mysql-connector-python <=8.0.29
     - python >=3.6
     - sqlalchemy
     - tabulate
