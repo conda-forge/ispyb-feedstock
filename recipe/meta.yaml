@@ -1,5 +1,5 @@
 {% set name = "ispyb" %}
-{% set version = "7.1.2" %}
+{% set version = "7.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ispyb-{{ version }}.tar.gz
-  sha256: a039323241d4eed3d5b6c0416b7aefd4940245f8c95617ae55d509bf3593154f
+  sha256: 9dabbe3aa4d8a05875240c0cf8b3de5f6bc0d3fc02fe9e785c81d8ecdeb1fe50
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
   run:
     - mysql-connector-python <=8.0.29
     - python >=3.6
-    - sqlalchemy
+    - sqlalchemy <2
     - tabulate
 
 test:
