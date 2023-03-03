@@ -24,7 +24,7 @@ requirements:
   run:
     - mysql-connector-python <=8.0.29
     - python >=3.6
-    - sqlalchemy<2
+    - sqlalchemy <2
     - tabulate
 
 test:
