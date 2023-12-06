@@ -1,5 +1,5 @@
 {% set name = "ispyb" %}
-{% set version = "8.0.1" %}
+{% set version = "9.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ispyb-{{ version }}.tar.gz
-  sha256: 2c455e3128d378fb3105219b0aefabf1b6105098c2a60dd2f754717a58a26047
+  sha256: b7e096e3315013aab43b53fbb3786a8da6cae00f781761ab9dd9188473d3082f
 
 build:
   number: 0
