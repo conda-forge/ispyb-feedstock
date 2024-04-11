@@ -60,8 +60,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - HorstmannA
     - stuartcampbell
     - KarlLevik
-    - anthchirp
-    - rjgildea
+    - ndevenish
