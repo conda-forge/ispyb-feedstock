@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ispyb-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ispyb-{{ version }}.tar.gz
   sha256: 03e8d6c6768fc4f6c07959738216664bc66ca9d6e5262092451ddb19729f5fba
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - ispyb.job = ispyb.cli.job:main
@@ -20,11 +20,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
   run:
     - mysql-connector-python >=8.0.32
-    - python >=3.7
+    - python >={{ python_min }}
     - sqlalchemy <2
     - tabulate
 
@@ -42,6 +42,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/ispyb/
