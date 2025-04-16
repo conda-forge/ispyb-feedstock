@@ -1,5 +1,5 @@
 {% set name = "ispyb" %}
-{% set version = "11.0.1" %}
+{% set version = "11.0.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ispyb-{{ version }}.tar.gz
-  sha256: ea4e21af9af806c0b7889d227b295c9825aa3e326f0c0c7b844785ebae70a315
+  sha256: f0782a3963725d7b2dd1d9a7179c682381c064afa954c06cbf41ef238b409533
 
 build:
   number: 0
