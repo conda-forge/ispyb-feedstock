@@ -155,5 +155,6 @@ Feedstock Maintainers
 
 * [@KarlLevik](https://github.com/KarlLevik/)
 * [@ndevenish](https://github.com/ndevenish/)
+* [@pblowey](https://github.com/pblowey/)
 * [@stuartcampbell](https://github.com/stuartcampbell/)
 

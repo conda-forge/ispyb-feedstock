@@ -11,7 +11,7 @@ source:
   sha256: 41be9fd588fd15528adf77268f579742ed7cc11da5297b1558d951bc333e2a54
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - ispyb.job = ispyb.cli.job:main
@@ -24,7 +24,7 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
-    - mysql-connector-python >=8.0.32
+    - mysql-connector-python ~=9.5.0
     - python >={{ python_min }}
     - sqlalchemy >2,<3
     - tabulate
